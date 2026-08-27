@@ -1,0 +1,29 @@
+
+{
+    "students": [
+        {
+            "id" : 1,
+            "name" : "John Doe",
+            "age" : 22,
+            "course" : "Backend",
+            "image" :  "/src/Assets/Justin beiber.jpg"
+
+        },
+        {
+            "id" : 2,
+            "name" : "Jane Smith",
+            "age" : 24,
+            "course" : "Frontend",
+            "image" :  "/src/Assets/Justin beiber.jpg"
+
+        },
+        {
+            "id" : 3,
+            "name" : "John Wick",
+            "age" : 35,
+            "course" : "Cybersecurity",
+            "image" :  "/src/Assets/Justin beiber.jpg"
+
+        }
+    ]
+}
