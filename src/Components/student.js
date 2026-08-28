@@ -1,19 +1,19 @@
 import React from 'react'
 import {useState,useEffect } from 'react';
-import image from './assets/Justin beiber.jpg'
 
 const Student = () => {
-    const [student,setStudents ] = useState([]);
+    const [students, setStudents] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:3000/students')
-        .then((response) => response.json()
-        .then((data) => {
-        setStudents(data);
-    })
-    .catch((error) => {
-        console.log("Error:", error);
-    }));
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Request failed: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) => setStudents(data))
+            .catch((error) => console.error('Error loading students:', error));
 }, []);
 
 

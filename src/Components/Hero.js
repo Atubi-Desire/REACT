@@ -1,9 +1,7 @@
 import React from 'react'
 import './hero.css'
-import { useState,useEffect } from 'react';
 
-const Hero = (props) => {
-  const {name}
+const Hero = () => {
   return (
     <div>Hero</div>
   )

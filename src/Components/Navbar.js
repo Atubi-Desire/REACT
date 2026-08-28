@@ -8,9 +8,9 @@ const Navbar = (props) => {
   return (
     <div>
       <h1> {title} </h1>
-      <P>This is my Description</P>
+      <p>This is my Description</p>
       <h2>This is my {props.title}</h2>
-      <p>This is my {props.Age}</p>
+      <p>This is my {props.age}</p>
       
     </div>
   )
