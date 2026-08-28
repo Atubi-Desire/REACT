@@ -1,11 +1,12 @@
 import React from 'react'
 import {useState,useEffect } from 'react';
+import studentImage from '../Assets/Justin beiber.jpg';
 
 const Student = () => {
     const [students, setStudents] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/students')
+        fetch('/students')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`Request failed: ${response.status}`);
@@ -23,7 +24,11 @@ const Student = () => {
 
         {students.map((student) => (
             <div key={student.id}>
-                <img src={student.image} alt={student.name} width="150" />
+                <img
+                    src={student.image?.startsWith('/src/') ? studentImage : student.image || studentImage}
+                    alt={student.name}
+                    width="150"
+                />
 
                 <h2>{student.age}</h2>
 
